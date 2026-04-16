@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* =========================
+   ESTILO GENERAL
+   ========================= */
+QMainWindow {
+    background-color: #F2FBFA; /* azul-verdoso muy claro */
+    font-family: &quot;Segoe UI&quot;, &quot;Arial&quot;;
+    font-size: 16px;
+    color: #2F4F4F;
+}
+
+QWidget#centralwidget {
+    background-color: transparent;
+}
+
+/* =========================
+   MENU BAR
+   ========================= */
+QMenuBar {
+    background-color: #D9F3F0; /* verde-azul suave */
+    padding: 6px;
+    border: none;
+}
+
+QMenuBar::item {
+    background: transparent;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+QMenuBar::item:selected {
+    background-color: #AEE6E1;
+}
+
+/* =========================
+   MENUS DESPLEGABLES
+   ========================= */
+QMenu {
+    background-color: #FFFFFF;
+    border: 1px solid #BFEAE5;
+    border-radius: 10px;
+    padding: 6px;
+}
+
+QMenu::item {
+    padding: 8px 20px;
+    border-radius: 6px;
+}
+
+QMenu::item:selected {
+    background-color: #E6FAF8;
+}
+
+/* =========================
+   LABELS
+   ========================= */
+QLabel {
+    color: #2F4F4F;
+    font-size: 16px;
+}
+
+/* Puedes usar este para títulos (opcional) */
+QLabel#label {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1F7A7A;
+}
+
+/* =========================
+   INPUT (QLineEdit)
+   ========================= */
+QLineEdit {
+    background-color: #FFFFFF;
+    border: 1.5px solid #BFEAE5;
+    border-radius: 10px;
+    padding: 8px;
+    color: #2F4F4F;
+}
+
+QLineEdit:focus {
+    border: 2px solid #4DB6AC; /* verde aqua */
+    background-color: #F5FFFE;
+}
+
+/* =========================
+   BOTONES PRINCIPALES
+   ========================= */
+QPushButton {
+    background-color: #B2EBF2; /* azul claro */
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    color: #1F3F3F;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #80DEEA;
+}
+
+QPushButton:pressed {
+    background-color: #4DD0E1;
+}
+
+/* =========================
+   BOTÓN SECUNDARIO
+   ========================= */
+QPushButton#pushButton_2 {
+    background-color: #C8E6C9; /* verde claro */
+}
+
+QPushButton#pushButton_2:hover {
+    background-color: #A5D6A7;
+}
+
+/* =========================
+   VARIACIÓN BOTONES (opcionales)
+   ========================= */
+QPushButton#pushButton_3 {
+    background-color: #AED581;
+}
+
+QPushButton#pushButton_4 {
+    background-color: #81D4FA;
+}
+
+QPushButton#pushButton_5 {
+    background-color: #80CBC4;
+}
+
+/* =========================
+   STATUS BAR
+   ========================= */
+QStatusBar {
+    background-color: #D9F3F0;
+    color: #2F4F4F;
+}
+
+/* =========================
+   SCROLLBAR (EXTRA PRO)
+   ========================= */
+QScrollBar:vertical {
+    background: #E0F7F5;
+    width: 10px;
+    margin: 2px;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical {
+    background: #80CBC4;
+    border-radius: 5px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #4DB6AC;
+}
+
+/* =========================
+   TOOLTIP
+   ========================= */
+QToolTip {
+    background-color: #FFFFFF;
+    color: #2F4F4F;
+    border: 1px solid #BFEAE5;
+    padding: 6px;
+    border-radius: 6px;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>40</y>
+      <width>31</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>xk</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="lineEdit">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>40</y>
+      <width>113</width>
+      <height>20</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_5">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>190</y>
+      <width>101</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>calcular</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>50</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>RESULTADOS</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>100</y>
+      <width>144</width>
+      <height>74</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="0" column="0">
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>caso 1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="text">
+        <string>caso 3</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="text">
+        <string>caso 2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="text">
+        <string>caso 4</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>300</x>
+      <y>80</y>
+      <width>101</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout_2">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>B1</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_12">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>B0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLabel" name="label_11">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>r</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>r2</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>yk</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>40</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
